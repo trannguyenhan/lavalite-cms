@@ -24,3 +24,21 @@ Products [https://lavalite.org/products.html](https://lavalite.org/products)
 ## License
 
 The Lavalite CMS is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
+
+## Run
+
+Install vendor and gen key:
+
+```bash
+docker-compose exec app composer update
+docker-compose exec app php artisan key:generate
+```
+
+Run migrate and seeder:
+
+```bash
+docker-compose exec app php artisan migrate
+docker-compose exec app php artisan db:seed
+```
+
+Access to `localhost:8005/admin` and enter username/email is `admin@lavalite.org` and password is `admin@lavalite` to login to admin dashboard.

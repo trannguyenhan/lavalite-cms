@@ -107,3 +107,4 @@ Homestead.json
 composer.dev.json
 composer.lock
 package-lock.json
+/mysql
